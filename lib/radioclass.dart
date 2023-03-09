@@ -10,6 +10,7 @@ class RadioClass extends StatefulWidget {
 enum Satisfacao { excelente, boa, regular, ruim }
 
 class _RadioClassState extends State<RadioClass> {
+
   String? _opcao;
 
   @override

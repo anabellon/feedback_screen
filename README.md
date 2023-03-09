@@ -1,16 +1,26 @@
-# feedback_screen
+# Tela de Feedback em Flutter
 
-A new Flutter project.
+Como parte do plano de estudos de Flutter, neste projeto está sendo recriado a tela de Feedback do aplicativo "TJRO" abaixo.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![alt text](https://live.staticflickr.com/65535/52736223952_d86bd019a5_z.jpg)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Anotações para instalação e inicialização do Flutter
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Run in terminal Bash
+
+```
+$ flutter create project_name
+
+$ cd flutter project_name
+
+$ flutter run
+
+$ new terminal
+
+$ flutter emulators
+
+$ flutter emulators --launch <name_emulator>
+
+```

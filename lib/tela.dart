@@ -1,6 +1,7 @@
 import 'package:feedback_screen/radioclass.dart';
 import 'package:flutter/material.dart';
 
+import 'botaoenviar.dart';
 import 'caixatexto.dart';
 
 class Tela extends StatefulWidget {
@@ -22,6 +23,7 @@ class TelaState extends State<Tela> {
             //Container(child: Text("Teste")),
             RadioClass(),
             CaixaTexto(),
+            BotaoEnviar(),
           ],
         ),
       ),
