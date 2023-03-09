@@ -15,32 +15,34 @@ class _RadioClassState extends State<RadioClass> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
           padding: EdgeInsets.all(16),
           child: Text(
-            "Sua opinião é importante para nós!\nComo está sua experiência com nosso aplicativo?",
+            "Sua opinião é importante para nós!\nComo está a experiência com nosso aplicativo?",
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 20,
             ),
           ),
         ),
         Divider(),
         RadioListTile(
+          fillColor: MaterialStateColor.resolveWith((states) => Colors.green.shade400),
           title: Text("Excelente"),
           value: "excelente",
           groupValue: _opcao,
           onChanged: (value) {
             setState(() {
               _opcao = value!;
-            });
+            },);
           },
         ),
         RadioListTile(
+          fillColor: MaterialStateColor.resolveWith((states) => Colors.blue.shade400),
           title: Text("Boa"),
           value: "boa",
           groupValue: _opcao,
@@ -51,6 +53,7 @@ class _RadioClassState extends State<RadioClass> {
           },
         ),
         RadioListTile(
+          fillColor: MaterialStateColor.resolveWith((states) => Colors.amber.shade400),
           title: Text("Regular"),
           value: "regular",
           groupValue: _opcao,
@@ -61,6 +64,7 @@ class _RadioClassState extends State<RadioClass> {
           },
         ),
         RadioListTile(
+          fillColor: MaterialStateColor.resolveWith((states) => Colors.red.shade400),
           title: Text("Ruim"),
           value: "ruim",
           groupValue: _opcao,

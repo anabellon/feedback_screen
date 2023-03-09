@@ -17,9 +17,8 @@ class _BotaoEnviarState extends State<BotaoEnviar> {
         children: <Widget>[
           const SizedBox(height: 28),
           ElevatedButton(
-            //style: style,
-            onPressed: () {},
-            child: const Text("Enviar feedback",
+            onPressed: () => _eventoClick(context),
+            child: const Text("Enviar Feedback",
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -27,5 +26,35 @@ class _BotaoEnviarState extends State<BotaoEnviar> {
           ),
         ],
       );
+  }
+
+  void _eventoClick (BuildContext context){
+    //onPressed
+    showDialog(
+    context:  context,
+    builder:  (BuildContext context) {
+      return AlertDialog(
+        title: new Text(
+          "Agradecemos seu Feedback",
+          textAlign: TextAlign.center,
+          ),
+        content: const SingleChildScrollView(
+          child: Icon(
+            Icons.sentiment_very_satisfied_rounded,
+            color: Colors.amber,
+            size: 50.0,
+          ),
+        ),
+      actions: <Widget>[
+        // define os botões na base do dialogo
+        ElevatedButton(
+          child: new Text("Fechar"),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],);
+    },
+  );
   }
 }
