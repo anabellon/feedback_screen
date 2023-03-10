@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+const String textoFeedback = "Enviar Feedback";
+const String textoAgradecimento = "Agradecemos seu Feedback";
+const String textoFechar = "Fechar";
+
 class BotaoEnviar extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -17,7 +21,7 @@ class _BotaoEnviarState extends State<BotaoEnviar> {
         ElevatedButton(
           onPressed: () => _eventoClick(context),
           child: const Text(
-            "Enviar Feedback",
+            textoFeedback,
             style: TextStyle(
               fontSize: 18,
             ),
@@ -33,8 +37,8 @@ class _BotaoEnviarState extends State<BotaoEnviar> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: new Text(
-            "Agradecemos seu Feedback",
+          title: const Text(
+            textoAgradecimento,
             textAlign: TextAlign.center,
           ),
           content: const SingleChildScrollView(
@@ -47,7 +51,9 @@ class _BotaoEnviarState extends State<BotaoEnviar> {
           actions: <Widget>[
             // define os botões na base do dialogo
             ElevatedButton(
-              child: new Text("Fechar"),
+              child: const Text(
+                textoFechar,
+              ),
               onPressed: () {
                 Navigator.of(context).pop();
               },

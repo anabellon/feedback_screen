@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const String textoSugestao = "Possui sugestões de melhorias?";
+const String textoHint = "Possui sugestões de melhorias?\nNos conte aqui.";
+
 class CaixaTexto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,11 +20,11 @@ class CaixaTexto extends StatelessWidget {
           ),
           filled: true,
           fillColor: Colors.white54,
-          labelText: "Possui sugestões de melhorias?",
+          labelText: textoSugestao,
           floatingLabelBehavior: FloatingLabelBehavior.auto,
-          prefixIcon: Icon(Icons.rate_review),
+          prefixIcon: const Icon(Icons.rate_review),
           hintMaxLines: 3,
-          hintText: "Possui sugestões de melhorias?\nNos conte aqui.",
+          hintText: textoHint,
           hintStyle: TextStyle(color: Colors.grey.shade600),
         ),
       ),
