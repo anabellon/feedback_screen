@@ -3,12 +3,26 @@ import 'package:flutter/material.dart';
 const String textoSugestao = "Possui sugestões de melhorias?";
 const String textoHint = "Possui sugestões de melhorias?\nNos conte aqui.";
 
-class CaixaTexto extends StatelessWidget {
+class CaixaTexto extends StatefulWidget {
+  const CaixaTexto({
+    super.key,
+    required this.controladorCampoTexto,
+  });
+  final TextEditingController controladorCampoTexto;
+
+  @override
+  State<StatefulWidget> createState() {
+    return _CaixaTextoState();
+  }
+}
+
+class _CaixaTextoState extends State<CaixaTexto> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: TextField(
+        controller: widget.controladorCampoTexto,
         keyboardType: TextInputType.multiline,
         maxLength: 400,
         minLines: 2,

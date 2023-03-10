@@ -5,6 +5,8 @@ const String titulo =
     "Sua opinião é importante para nós!\nComo está a experiência com nosso aplicativo?";
 
 class RadioClass extends StatefulWidget {
+  const RadioClass({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _RadioClassState();
@@ -56,6 +58,7 @@ class _RadioClassState extends State<RadioClass> {
                   setState(
                     () {
                       _opcao = value!.toString();
+                      debugPrint(_opcao);
                     },
                   );
                 },

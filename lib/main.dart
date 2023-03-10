@@ -2,10 +2,12 @@ import 'package:feedback_screen/tela.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(FeedbackScreen());
+  runApp(const FeedbackScreen());
 }
 
 class FeedbackScreen extends StatelessWidget {
+  const FeedbackScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +16,7 @@ class FeedbackScreen extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.grey[300],
       ),
-      home: Tela(),
+      home: const Tela(),
     );
   }
 }

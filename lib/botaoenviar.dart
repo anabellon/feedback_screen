@@ -5,6 +5,9 @@ const String textoAgradecimento = "Agradecemos seu Feedback";
 const String textoFechar = "Fechar";
 
 class BotaoEnviar extends StatefulWidget {
+  const BotaoEnviar({super.key, required this.valor});
+  final String valor;
+
   @override
   State<StatefulWidget> createState() {
     return _BotaoEnviarState();
@@ -19,7 +22,10 @@ class _BotaoEnviarState extends State<BotaoEnviar> {
       children: <Widget>[
         const SizedBox(height: 28),
         ElevatedButton(
-          onPressed: () => _eventoClick(context),
+          onPressed: () {
+            debugPrint(widget.valor);
+            _eventoClick(context);
+          },
           child: const Text(
             textoFeedback,
             style: TextStyle(
