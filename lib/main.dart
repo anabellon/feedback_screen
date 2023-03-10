@@ -12,7 +12,6 @@ class FeedbackScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        // unselectedWidgetColor: Colors.black,
         scaffoldBackgroundColor: Colors.grey[300],
       ),
       home: Tela(),

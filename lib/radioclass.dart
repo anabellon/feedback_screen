@@ -10,12 +10,10 @@ class RadioClass extends StatefulWidget {
 enum Satisfacao { excelente, boa, regular, ruim }
 
 class _RadioClassState extends State<RadioClass> {
-
   String? _opcao;
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -31,18 +29,20 @@ class _RadioClassState extends State<RadioClass> {
         ),
         Divider(),
         RadioListTile(
-          fillColor: MaterialStateColor.resolveWith((states) => Colors.green.shade400),
+          activeColor: Colors.green,
           title: Text("Excelente"),
           value: "excelente",
           groupValue: _opcao,
           onChanged: (value) {
-            setState(() {
-              _opcao = value!;
-            },);
+            setState(
+              () {
+                _opcao = value!;
+              },
+            );
           },
         ),
         RadioListTile(
-          fillColor: MaterialStateColor.resolveWith((states) => Colors.blue.shade400),
+          activeColor: Colors.blue,
           title: Text("Boa"),
           value: "boa",
           groupValue: _opcao,
@@ -53,7 +53,7 @@ class _RadioClassState extends State<RadioClass> {
           },
         ),
         RadioListTile(
-          fillColor: MaterialStateColor.resolveWith((states) => Colors.amber.shade400),
+          activeColor: Colors.amber,
           title: Text("Regular"),
           value: "regular",
           groupValue: _opcao,
@@ -64,7 +64,7 @@ class _RadioClassState extends State<RadioClass> {
           },
         ),
         RadioListTile(
-          fillColor: MaterialStateColor.resolveWith((states) => Colors.red.shade400),
+          activeColor: Colors.red,
           title: Text("Ruim"),
           value: "ruim",
           groupValue: _opcao,

@@ -8,7 +8,8 @@ class CaixaTexto extends StatelessWidget {
       child: TextField(
         keyboardType: TextInputType.multiline,
         maxLength: 400,
-        maxLines: null, //quebra de linha
+        minLines: 2,
+        maxLines: 6, //quebra de linha
         textAlign: TextAlign.left,
         decoration: InputDecoration(
           border: OutlineInputBorder(
