@@ -6,11 +6,11 @@ Como parte do plano de estudos de Flutter, neste projeto foi recriada a tela de 
 
 ## Screenshots
 
-Tela de Feedback do app TJRO:
+- Tela de Feedback do app TJRO:
 
 ![alt text](https://live.staticflickr.com/65535/52736223952_d86bd019a5_z.jpg)
 
-Tela recriada:
+- Tela recriada:
 
 ![alt text](https://live.staticflickr.com/65535/52768823168_6565305632_b.jpg)
 
